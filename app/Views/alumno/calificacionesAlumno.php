@@ -53,35 +53,33 @@
 </head>
 <body>
 
-    <h2>Calificaciones</h2>
+<h2>Calificaciones</h2>
 
-    <table>
-        <thead>
+<table>
+    <thead>
+        <tr>
+            <th style="background-color: #ffeecc;">Español</th>
+            <th style="background-color: #ffeecc;">Matemáticas</th>
+            <th style="background-color: #ffeecc;">Historia</th>
+            <th style="background-color: #ffeecc;">Civismo</th>
+            <th style="background-color: #ffeecc;">Educación física</th>
+            <th style="background-color: #ffeecc;">Geografía</th>
+            <th style="background-color: #ffeecc;">Ciencias naturales</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($calificaciones as $calificacion): ?>
             <tr>
-                <th style="background-color: #ffeecc;">Alumno</th>
-                <th style="background-color: #ffeecc;">Español</th>
-                <th style="background-color: #ffeecc;">Matemáticas</th>
-                <th style="background-color: #ffeecc;">Historia</th>
-                <th style="background-color: #ffeecc;">Civismo</th>
-                <th style="background-color: #ffeecc;">Educación física</th>
-                <th style="background-color: #ffeecc;">Geografía</th>
-                <th style="background-color: #ffeecc;">Ciencias naturales</th>
+                <td><?= $calificacion->español ?></td>
+                <td><?= $calificacion->matematicas ?></td>
+                <td><?= $calificacion->historia ?></td>
+                <td><?= $calificacion->civismo ?></td>
+                <td><?= $calificacion->edFisica ?></td>
+                <td><?= $calificacion->geografia ?></td>
+                <td><?= $calificacion->ciencias ?></td>
             </tr>
-        </thead>
-        <tbody>
-            <?php foreach($calificaciones as $calificacion): ?>
-                <tr>
-                        <td><?=$calificacion->alumno ?></td>
-                        <td><?=$calificacion->español ?></td>
-                        <td><?=$calificacion->matematicas ?></td>
-                        <td><?=$calificacion->historia ?></td>
-                        <td><?=$calificacion->civismo ?></td>
-                        <td><?=$calificacion->edFisica ?></td>
-                        <td><?=$calificacion->geografia ?></td>
-                        <td><?=$calificacion->ciencias ?></td>
-                </tr>
-            <?php endforeach ?>
-        </tbody>
-    </table>
+        <?php endforeach ?>
+    </tbody>
+</table>
 </body>
 </html>

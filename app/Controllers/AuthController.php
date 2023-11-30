@@ -56,4 +56,18 @@ class AuthController extends Controller
             return redirect()->to('/')->with('error', 'Credenciales incorrectas');
         }
     }
+
+    public function inicioAlumno()
+    {
+        $session = session();
+        $alumno = $session->get('alumno');
+    
+        $calificacionModel = new CalificacionModel();
+        $data['calificaciones'] = $calificacionModel
+            ->where('alumno', $alumno->numeroControl)
+            ->findAll();
+    
+        return view('calificaciones/alumno', $data);
+    }
+    
 }
