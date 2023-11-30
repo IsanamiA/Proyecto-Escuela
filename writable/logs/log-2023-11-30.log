@@ -1,0 +1,16 @@
+ERROR - 2023-11-30 02:04:31 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`primaria`.`materias`, CONSTRAINT `materias_ibfk_1` FOREIGN KEY (`maestro`) REFERENCES `maestros` (`id`)) in C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ma...', 0)
+#1 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ma...')
+#2 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ma...')
+#3 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ma...', Array, false)
+#4 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\app\Controllers\AdminController.php(323): CodeIgniter\Model->insert(Array, false)
+#8 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\CodeIgniter.php(919): App\Controllers\AdminController->insertMateria()
+#9 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\isana\OneDrive\Documentos\Escuela\Diseño de aplicaciones wep\ESCUELA\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isana\\...')
+#13 {main}
