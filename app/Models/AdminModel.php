@@ -11,8 +11,6 @@ class AdminModel extends Model
     protected $allowedFields = ['usuario', 'contrasena', 'created_at', 'updated_at', 'deleted_at'];
     protected $useTimestamps = true;
 
-    // ... otros métodos y propiedades si es necesario
-
     public function authenticate($usuario, $contrasena)
     {
         // Utiliza password_hash para almacenar contraseñas de manera segura

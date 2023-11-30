@@ -39,6 +39,9 @@ class MateriaModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+
+// funcion para poder buscar materias: 
+
     public function buscarMateria($nombre,$nombreCorto)
     {
        return $this->like('nombre',$nombre)

@@ -144,19 +144,6 @@ class AdminController extends BaseController
 
     public function mostrarMaestro()
     {
-       /* try {
-            $maestroModel = model('MaestroModel');
-            $data['maestros'] = $maestroModel->getMaestros();
-
-            $data['title'] = 'Administrar Maestros';
-
-            return view('common/head') .
-                view('common/menuMaestro') .
-                view('admin/mostrarmaestro', $data) .
-                view('common/footer');
-        } catch (\Exception $e) {
-            die($e->getMessage());
-        }*/
         $maestroModel = model('MaestroModel');
         $data['maestros'] = $maestroModel->findAll();
     

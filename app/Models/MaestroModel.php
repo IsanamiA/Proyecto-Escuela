@@ -39,6 +39,9 @@ class MaestroModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+
+    //funcion para poder buscar maestros:
+    
     public function buscarMaestro($nombre, $matricula)
     {
         return $this->like('nombre', $nombre)

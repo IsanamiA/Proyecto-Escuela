@@ -39,6 +39,8 @@ class AlumnoModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+    //funcion para poder buscar alumnos
+
     public function buscarAlumnos($nombre, $numeroControl, $grado, $grupo)
     {
         return $this->like('nombre', $nombre)
