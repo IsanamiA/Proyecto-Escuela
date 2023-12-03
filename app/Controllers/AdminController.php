@@ -18,7 +18,7 @@ class AdminController extends BaseController
 
     public function mostrarAlumno()
     {
-        $alumnoModel = model('AlumnoModel'); //Se toma el modelo que contiene los datos del alumno directamente de la base de datos
+        $alumnoModel = model('AlumnoModel'); //Se toma el modelo que contiene los datos del alumno directamente de la base de datoszz
         $data['alumnos'] = $alumnoModel->findAll(); //Se establece la variable "alumnos" para posteriormente usarla en la vista
     
         return 
@@ -222,7 +222,7 @@ class AdminController extends BaseController
             "telefono" => $_POST['telefono']
         ];
         $maestroModel->insert($data, false);
-        return redirect()->to('admin/mostrarMaestro');
+        return redirect('admin/mostrarMaestro', 'refresh');
     }
 
 

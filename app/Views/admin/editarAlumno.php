@@ -125,9 +125,24 @@
             </div>
             <div class="form-group-buttons">
                 <input type="submit" value="Enviar">
-                <input type="button" value="Cancelar">
-            </div>
+                <input type="button" value="Cancelar" id="cancelButton">
+            </div> 
         </form>
     </div>
+<!-- Script para limpiar campos y redirigir al pulsar el botón Cancelar -->
+<script>
+    document.getElementById('cancelButton').addEventListener('click', function() {
+        var formElements = document.getElementsByTagName('input');
+        
+        for (var i = 0; i < formElements.length; i++) {
+            if (formElements[i].type !== 'button') {
+                formElements[i].value = '';
+            }
+        }
+        window.location.href = '/admin/mostrarAlumno';
+    });
+</script>
+
 </body>
 </html>
+

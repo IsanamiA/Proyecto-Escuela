@@ -9,6 +9,7 @@ class Inicio extends Controller
     public function index()
     {
         return view('inicio'); //Solo se mostrara la vista del inicio del administrador
+        
     }
 
     public function menu()
